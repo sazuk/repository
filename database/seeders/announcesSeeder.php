@@ -17,8 +17,8 @@ class announcesSeeder extends Seeder
     public function run()
     {
         DB::table('announces')->insert([
-                'title' => '命名の心得',
-                'body' => '命名はデータを基準に考える',
+                'title' => 'お知らせ',
+                'body' => 'ｗｗｗｗｗｗｗｗｗｗ',
                 'user_id' => 1,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),

@@ -14,7 +14,6 @@ use App\Http\Controllers\QuestionsController;  //外部にあるPostController�
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/questions', 'App\Http\Controllers\QuestionsController@index');
+Route::get('/', [QuestionsController::class, 'index']);
+Route::get('/questions', [QuestionsController::class, 'questions']);
+Route::get('/announces', [QuestionsController::class, 'announces']);
