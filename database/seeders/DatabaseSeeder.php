@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
                 announcesSeeder::class,
                 user_answersSeeder::class,
                 favoritesSeeder::class,
+                UsersTableSeeder::class,
         ]);
     }
 }
