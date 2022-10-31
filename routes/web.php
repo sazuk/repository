@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\QuestionsController;  //外部にあるPostControllerクラスをインポート。
+use App\Http\Controllers\QuestionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,17 @@ use App\Http\Controllers\QuestionsController;  //外部にあるPostController�
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', [QuestionsController::class, 'index']);
 Route::get('/questions', [QuestionsController::class, 'questions']);
 Route::get('/announces', [QuestionsController::class, 'announces']);
+Route::get('/favorites', [QuestionsController::class, 'favorites']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+Route::controller(QuestionsController::class)->middleware(['auth'])->group(function(){
+    
+});

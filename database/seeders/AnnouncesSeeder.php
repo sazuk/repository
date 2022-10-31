@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 
-class user_answersSeeder extends Seeder
+class AnnouncesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,10 @@ class user_answersSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('user_answers')->insert([
+        DB::table('announces')->insert([
+                'title' => 'お知らせ',
+                'body' => 'ｗｗｗｗｗｗｗｗｗｗ',
                 'user_id' => 1,
-                'question_id' => 1,
-                'answer'=> 'bbbbbbb',
-                'correct'=> 'bbbbbbb',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);

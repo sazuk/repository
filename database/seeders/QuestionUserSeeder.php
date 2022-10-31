@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 
-class favoritesSeeder extends Seeder
+class QuestionUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class favoritesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('favorites')->insert([
+        DB::table('question_user')->insert([
                 'user_id' => 1,
                 'question_id' => 1,
          ]);

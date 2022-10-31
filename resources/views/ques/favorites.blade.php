@@ -12,17 +12,14 @@
         <a href="/">home</a>
         <a href="/announces">お知らせ</a>
         </h2>
-        <h1>問題集</h1>
+        <h1>見返し用問題集</h1>
         <div class='posts'>
-            @foreach ($questions as $ques)
-                <div class='post'>
-                    <h2 class='title'>{{ $ques->title }}</h2>
-                    <p class='body'>{{ $ques->body }}</p>
-                </div>
+            @foreach ($users as $user)
+                 @foreach($user->questions as $ques)   
+                    {{ $ques->title }}
+                    {{ $ques->based }}
+                @endforeach
             @endforeach
-        </div>
-        <div class='paginate'>
-            {{ $questions->links() }}
         </div>
     </body>
 </html>
