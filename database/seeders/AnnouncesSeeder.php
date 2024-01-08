@@ -18,7 +18,7 @@ class AnnouncesSeeder extends Seeder
     {
         DB::table('announces')->insert([
                 'title' => 'お知らせ',
-                'body' => 'ｗｗｗｗｗｗｗｗｗｗ',
+                'body' => '流れ図学習ツールを公開しました',
                 'user_id' => 1,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),

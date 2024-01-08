@@ -5,21 +5,21 @@
         <meta charset="utf-8">
         <title>Blog</title>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/b.css') }}">
     </head>
     <body>
+         <h1>流れ図学習ツール</h1>
         <h2 class='title'>
-        <a href="/">home</a>
+        <a href="/">HOME</a>
         <a href="/announces">お知らせ</a>
         </h2>
-        <h1>問題集</h1>
-        <div class='posts'>
-            @foreach ($questions as $ques)
-                <div class='post'>
-                    <h2 class='title'>{{ $ques->title }}</h2>
-                    <p class='body'>{{ $ques->body }}</p>
-                </div>
-            @endforeach
+       
+        <a href="https://lms.quizgenerator.net/index.php?action=quizPlayer&options=eyJzY29faWQiOjQ5MzU4NDEsImNhbGwiOiJleHRlcm5hbCIsImhlYWRlciI6eyJzbnMiOnsidmlzaWJsZSI6dHJ1ZX0sInZpb2xhdGlvblJlcG9ydCI6eyJ2aXNpYmxlIjp0cnVlfSwiZ29vZCI6eyJ2aXNpYmxlIjpmYWxzZX0sInBhZ2VyIjp7InZpc2libGUiOmZhbHNlfX19&cate=1">
+            <button class="p1">総合問題</button></a><br>
+        <a href="https://lms.quizgenerator.net/index.php?action=quizPlayer&options=eyJzY29faWQiOjQ5MzYxOTQsImNhbGwiOiJleHRlcm5hbCIsImhlYWRlciI6eyJzbnMiOnsidmlzaWJsZSI6dHJ1ZX0sInZpb2xhdGlvblJlcG9ydCI6eyJ2aXNpYmxlIjp0cnVlfSwiZ29vZCI6eyJ2aXNpYmxlIjpmYWxzZX0sInBhZ2VyIjp7InZpc2libGUiOmZhbHNlfX19&cate=1">
+            <button class="p2">流れ図知識問題</button></a><br>
+        <a href="https://lms.quizgenerator.net/index.php?action=quizPlayer&options=eyJzY29faWQiOjQ5MzYyNDEsImNhbGwiOiJleHRlcm5hbCIsImhlYWRlciI6eyJzbnMiOnsidmlzaWJsZSI6dHJ1ZX0sInZpb2xhdGlvblJlcG9ydCI6eyJ2aXNpYmxlIjp0cnVlfSwiZ29vZCI6eyJ2aXNpYmxlIjpmYWxzZX0sInBhZ2VyIjp7InZpc2libGUiOmZhbHNlfX19&cate=1">
+            <button class="p3">流れ図読み取り問題</button></a><br>
         </div>
         <div class='paginate'>
             {{ $questions->links() }}

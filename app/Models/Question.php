@@ -16,7 +16,6 @@ class Question extends Model
     }
     
     public function users(){
-    //生徒は多数の科目を履修。
     return $this->belongsToMany(User::class);
 }
 }

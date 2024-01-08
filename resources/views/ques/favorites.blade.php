@@ -17,7 +17,6 @@
             @foreach ($users as $user)
                  @foreach($user->questions as $ques)   
                     {{ $ques->title }}
-                    {{ $ques->based }}
                 @endforeach
             @endforeach
         </div>

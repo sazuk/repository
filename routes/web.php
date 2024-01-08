@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionsController;
-
+use App\Http\Controllers\CloudinaryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use App\Http\Controllers\QuestionsController;
 Route::get('/', [QuestionsController::class, 'index']);
 Route::get('/questions', [QuestionsController::class, 'questions']);
 Route::get('/announces', [QuestionsController::class, 'announces']);
-Route::get('/favorites', [QuestionsController::class, 'favorites']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -25,5 +25,8 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::controller(QuestionsController::class)->middleware(['auth'])->group(function(){
-    
+    Route::get('/favorites', [QuestionsController::class, 'favorites']);
 });
+
+Route::get('/cloudinary', [CloudinaryController::class, 'cloudinary']);  //投稿フォームの表示
+Route::post('/cloudinary', [CloudinaryController::class, 'cloudinary_store']);  //画像保存処理

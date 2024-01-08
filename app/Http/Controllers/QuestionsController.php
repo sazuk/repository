@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Models\Home;
 use App\Models\Announce;
 use App\Models\User;
+use Cloudinary;
 
 class QuestionsController extends Controller
 {
@@ -30,9 +31,7 @@ class QuestionsController extends Controller
     
     public function favorites(Question $ques,User $user)
     {
-    auth()->user()->questions()->attach(2);
-    dd(auth()->user()->questions);
-    return view('ques/favorites')->with(['favorites' => $favo->get(),'questions' => $ques->get(),'users' => $user->get()]);
+    return view('ques/favorites')->with(['questions' => $ques->get(),'users' => $user->get()]);
     }
 }
 ?>

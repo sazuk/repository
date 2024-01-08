@@ -1,0 +1,55 @@
+@charset "utf-8";
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 見出しのスタイル */
+h1 {
+    font-size: 2.5em;
+    text-align: left;
+    color: #666666; /* 文字色を灰色に設定 */
+    background-color: #000000; /* 背景色を黒色に設定 */
+    padding: 10px; /* 適宜パディングを追加 */
+}
+h2.title {
+    padding-left: 50px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* リンクのスタイル */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 記事のスタイル */
+.posts {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+
+/* 本文のスタイル */
+p {
+    padding-left: 50px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* 特定のクラスの本文スタイル */
+p.body {
+    font-weight: bold;
+}
