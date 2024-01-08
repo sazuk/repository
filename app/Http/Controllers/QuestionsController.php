@@ -25,7 +25,7 @@ class QuestionsController extends Controller
     
     public function announces(Announce $anuns)
     {
-    return view('ques/anuns')->with(['announces' => $anuns->getPaginateByLimit()]);
+    return view('ques/anuns');
     //'post'はbladeファイルで使う変数。中身は$postはid=1のPostインスタンス。
     }
     

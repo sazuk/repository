@@ -18,7 +18,6 @@
             
         </div>
         <div class='paginate'>
-            {{ $announces->links() }}
         </div>
     </body>
 </html>
